@@ -1,0 +1,29 @@
+### Send sensor data
+POST http://localhost:5000/api/sensor-data
+Content-Type: application/json
+
+{
+  "type": "humidity",
+  "value": 65.2
+}
+
+###
+
+### Control actuator
+POST http://localhost:5000/api/control
+Content-Type: application/json
+
+{
+  "device": "pump",
+  "status": false
+}
+
+###
+
+### Get all sensor data
+GET http://localhost:5000/api/sensor-data
+
+###
+
+### Get actuator status
+GET http://localhost:5000/api/status
